@@ -1,6 +1,10 @@
 package com.wallet.metier;
 
 import java.util.UUID;
+
+import enums.Priority;
+import enums.Status;
+
 import java.time.LocalDateTime;
 
 public class Transaction {
@@ -12,9 +16,11 @@ public class Transaction {
 	private LocalDateTime date;
 	private double frais;
 	private int taille_bytes;
+	private Priority priority;
+    private Status status;
 	
 	public Transaction (UUID id , double montant, String source,String destination,
-			LocalDateTime date,double frais,int taille_bytes) {
+			LocalDateTime date,double frais,int taille_bytes,Priority priority, Status status) {
 		this.id = id != null ? id : UUID.randomUUID();
 		this.montant=montant;
 		this.source=source;
@@ -22,6 +28,8 @@ public class Transaction {
 		this.date=(date != null) ? date : LocalDateTime.now();
 		this.frais=frais;
 		this.taille_bytes=taille_bytes;
+		this.priority = priority;
+        this.status = status;
 		
 	}
 	
@@ -75,5 +83,20 @@ public class Transaction {
 	public void setTaille_bytes(int taille_bytes) {
 		this.taille_bytes=taille_bytes;
 	}
+	public Priority getPriority() {
+        return priority;
+    }
+	public void setPriority(Priority priority) {
+        this.priority = priority;
+    }
+
+    public Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
+    }
+
 	
 }
