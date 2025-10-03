@@ -1,4 +1,4 @@
-package Validation;
+package com.wallet.utilitaire;
 
 public class TransactionValidator {
 
