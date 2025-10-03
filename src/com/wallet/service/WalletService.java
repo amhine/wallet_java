@@ -7,9 +7,9 @@ import com.wallet.metier.Transaction;
 import com.wallet.metier.Wallet;
 import com.wallet.metier.WalletBitcoin;
 import com.wallet.metier.WalletEthereum;
+import com.wallet.utilitaire.TransactionValidator;
+import com.wallet.utilitaire.WalletValidator;
 
-import Validation.TransactionValidator;
-import Validation.WalletValidator;
 import config.LoggerConfig;
 import enums.Priority;
 import repository.TransactionRepository;

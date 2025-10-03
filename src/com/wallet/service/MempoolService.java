@@ -2,7 +2,9 @@ package com.wallet.service;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.OptionalDouble;
 import java.util.OptionalInt;
 import java.util.Random;
@@ -65,20 +67,20 @@ public class MempoolService {
         return OptionalDouble.empty();
     }
     
-    public List<FeeComparisonResponseDTO> compareFeeLevels(Transaction tx, Wallet wallet, int txPerBlock) {
-        List<FeeComparisonResponseDTO> result = new ArrayList<>();
+    public List<Map<String, Object>> compareFeeLevels(Transaction tx, Wallet wallet, int txPerBlock) {
+        List<Map<String, Object>> result = new ArrayList<>();
 
         for (Priority priority : Priority.values()) {
             Transaction tempTx = new Transaction(
-                    tx.getId(),
-                    tx.getMontant(),  
-                    tx.getSource(), 
+                    UUID.randomUUID(),
+                    tx.getMontant(),
+                    tx.getSource(),
                     tx.getDestination(),
-                    null,
+                    LocalDateTime.now(),
                     0.0,
                     tx.getTaille_bytes(),
                     priority,
-                    Status.PENDING 
+                    Status.PENDING
             );
 
             double fee = wallet.calculerFrais(tempTx);
@@ -91,11 +93,19 @@ public class MempoolService {
 
             double estTime = ((double) position / txPerBlock) * BLOCK_TIME_MINS;
 
-            result.add(new FeeComparisonResponseDTO(priority.name(), fee, position, estTime));
+            Map<String, Object> info = new HashMap<>();
+            info.put("priority", priority.name());
+            info.put("fee", fee);
+            info.put("position", position);
+            info.put("estimatedTime", estTime);
+
+            result.add(info);
         }
 
         return result;
     }
+
+
     
     private String randomEthereumAddress() {
         String hex = UUID.randomUUID().toString().replace("-", "");
