@@ -1,15 +1,17 @@
 package com.wallet.metier;
 
 import java.util.HashSet;
+import java.util.Set;
 import java.util.UUID;
 
 public class WalletBitcoin extends Wallet {
 
 	private final static double satoshi_byte= 10.0;
 	
-	public WalletBitcoin(String adress, double solde,double satoshi_byte) {
-		super(UUID.randomUUID(), adress, solde, new HashSet<Transaction>()); 
+	public WalletBitcoin(UUID id,String adress, double solde,Set<Transaction> transactions) {
+		super(id, adress, solde, transactions); 
 	}
+
 	
 	public double getSatoshi_byte() {
 		return satoshi_byte;
