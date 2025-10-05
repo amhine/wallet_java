@@ -18,9 +18,10 @@ public class TransactionRepositoryImpl implements TransactionRepository {
 
     @Override
     public void save(UUID walletId, Transaction transaction) {
-        String sql = "INSERT INTO Transaction " +
-                "(id, wallet_id, montant, source, destination, datee, frais, taille_bytes, priority, status) " +
-                "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    	String sql = "INSERT INTO transactions " +
+    		    "(id, wallet_id, montant, source, destination, datee, frais, taille_bytes, priority, status) " +
+    		    "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?::transaction_priority, ?::transaction_status)";
+
 
         try (Connection conn = DbConnection.getInstance().getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
@@ -47,7 +48,7 @@ public class TransactionRepositoryImpl implements TransactionRepository {
 
     @Override
     public Optional<Transaction> findById(UUID id) {
-        String sql = "SELECT * FROM Transaction WHERE id = ?";
+        String sql = "SELECT * FROM transactions WHERE id = ?";
 
         try (Connection conn = DbConnection.getInstance().getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
@@ -81,7 +82,7 @@ public class TransactionRepositoryImpl implements TransactionRepository {
 
     @Override
     public List<Transaction> findAll() {
-        String sql = "SELECT * FROM Transaction";
+        String sql = "SELECT * FROM transactions";
         List<Transaction> transactions = new ArrayList<>();
 
         try (Connection conn = DbConnection.getInstance().getConnection();
