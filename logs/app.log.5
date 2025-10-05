@@ -1,0 +1,548 @@
+oct. 05, 2025 5:13:58 PM org.postgresql.Driver connect
+PRÉCIS: Connecting with URL: jdbc:postgresql://localhost:5432/wallet_java
+oct. 05, 2025 5:13:58 PM org.postgresql.jdbc.PgConnection <init>
+PRÉCIS: PostgreSQL JDBC Driver 42.7.3
+oct. 05, 2025 5:13:58 PM org.postgresql.jdbc.PgConnection setDefaultFetchSize
+PRÉCIS:   setDefaultFetchSize = 0
+oct. 05, 2025 5:13:58 PM org.postgresql.jdbc.PgConnection setPrepareThreshold
+PRÉCIS:   setPrepareThreshold = 5
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.ConnectionFactoryImpl openConnectionImpl
+PRÉCIS: Trying to establish a protocol version 3 connection to localhost:5432
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.ConnectionFactoryImpl tryConnect
+PRÉCIS: Receive Buffer Size is 65 536
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.ConnectionFactoryImpl tryConnect
+PRÉCIS: Send Buffer Size is 1 313 280
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.ConnectionFactoryImpl enableSSL
+LE PLUS PRÉCIS:  FE=> SSLRequest
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.ConnectionFactoryImpl enableSSL
+LE PLUS PRÉCIS:  <=BE SSLOk
+oct. 05, 2025 5:13:58 PM org.postgresql.ssl.MakeSSL convert
+PRÉCIS: converting regular socket connection to ssl
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.ConnectionFactoryImpl sendStartupPacket
+LE PLUS PRÉCIS:  FE=> StartupPacket(user=postgres, database=wallet_java, client_encoding=UTF8, DateStyle=ISO, TimeZone=Africa/Casablanca, extra_float_digits=2)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.ConnectionFactoryImpl doAuthentication
+LE PLUS PRÉCIS:  <=BE AuthenticationSASL
+oct. 05, 2025 5:13:58 PM org.postgresql.jre7.sasl.ScramAuthenticator processServerMechanismsAndInit
+LE PLUS PRÉCIS:  Using SCRAM mechanism SCRAM-SHA-256
+oct. 05, 2025 5:13:58 PM org.postgresql.jre7.sasl.ScramAuthenticator sendScramClientFirstMessage
+LE PLUS PRÉCIS:  FE=> SASLInitialResponse( n,,n=*,r=t5n.ofDu??-&cSvPK;^OcB>C )
+oct. 05, 2025 5:13:58 PM org.postgresql.jre7.sasl.ScramAuthenticator processServerFirstMessage
+LE PLUS PRÉCIS:  <=BE AuthenticationSASLContinue( r=t5n.ofDu??-&cSvPK;^OcB>C99Feoz3cRQSgLCqx61v5Ma7E,s=BGqv5dfbZc3bSKC16W8fhQ==,i=4096 )
+oct. 05, 2025 5:13:58 PM org.postgresql.jre7.sasl.ScramAuthenticator processServerFirstMessage
+LE PLUS PRÉCIS:  <=BE AuthenticationSASLContinue(salt=BGqv5dfbZc3bSKC16W8fhQ==, iterations=4 096)
+oct. 05, 2025 5:13:58 PM org.postgresql.jre7.sasl.ScramAuthenticator processServerFirstMessage
+LE PLUS PRÉCIS:  FE=> SASLResponse( c=biws,r=t5n.ofDu??-&cSvPK;^OcB>C99Feoz3cRQSgLCqx61v5Ma7E,p=F/+GaIY5RAFA6ZBwvYuZUDxAQ4NM6q7Uus+qdknjbBU= )
+oct. 05, 2025 5:13:58 PM org.postgresql.jre7.sasl.ScramAuthenticator verifyServerSignature
+LE PLUS PRÉCIS:  <=BE AuthenticationSASLFinal( v=22zkBfikCg/VWjSbycDt2edWsOWkd4IvpUdp9nQ82YQ= )
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.ConnectionFactoryImpl doAuthentication
+LE PLUS PRÉCIS:  <=BE AuthenticationOk
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus
+LE PLUS PRÉCIS:  <=BE ParameterStatus(in_hot_standby = off)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus
+LE PLUS PRÉCIS:  <=BE ParameterStatus(integer_datetimes = on)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus
+LE PLUS PRÉCIS:  <=BE ParameterStatus(TimeZone = Africa/Casablanca)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus
+LE PLUS PRÉCIS:  <=BE ParameterStatus(IntervalStyle = postgres)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus
+LE PLUS PRÉCIS:  <=BE ParameterStatus(is_superuser = on)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus
+LE PLUS PRÉCIS:  <=BE ParameterStatus(application_name = )
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus
+LE PLUS PRÉCIS:  <=BE ParameterStatus(default_transaction_read_only = off)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus
+LE PLUS PRÉCIS:  <=BE ParameterStatus(scram_iterations = 4096)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus
+LE PLUS PRÉCIS:  <=BE ParameterStatus(DateStyle = ISO, DMY)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus
+LE PLUS PRÉCIS:  <=BE ParameterStatus(standard_conforming_strings = on)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus
+LE PLUS PRÉCIS:  <=BE ParameterStatus(session_authorization = postgres)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus
+LE PLUS PRÉCIS:  <=BE ParameterStatus(client_encoding = UTF8)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus
+LE PLUS PRÉCIS:  <=BE ParameterStatus(server_version = 16.10 (Ubuntu 16.10-0ubuntu0.24.04.1))
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus
+LE PLUS PRÉCIS:  <=BE ParameterStatus(server_encoding = UTF8)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl readStartupMessages
+LE PLUS PRÉCIS:  <=BE BackendKeyData(pid=71 229,ckey=2 037 987 525)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveRFQ
+LE PLUS PRÉCIS:  <=BE ReadyForQuery(I)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl execute
+LE PLUS PRÉCIS:   simple execute, handler=org.postgresql.core.SetupQueryRunner$SimpleResultHandler@2669b199, maxRows=0, fetchSize=0, flags=1 047
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl sendParse
+LE PLUS PRÉCIS:  FE=> Parse(stmt=null,query="SET extra_float_digits = 3",oids={})
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl sendBind
+LE PLUS PRÉCIS:  FE=> Bind(stmt=null,portal=null)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl sendExecute
+LE PLUS PRÉCIS:  FE=> Execute(portal=null,limit=1)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl sendSync
+LE PLUS PRÉCIS:  FE=> Sync
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl processResults
+LE PLUS PRÉCIS:  <=BE ParseComplete [null]
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl processResults
+LE PLUS PRÉCIS:  <=BE BindComplete [unnamed]
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveCommandStatus
+LE PLUS PRÉCIS:  <=BE CommandStatus(SET)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveRFQ
+LE PLUS PRÉCIS:  <=BE ReadyForQuery(I)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl execute
+LE PLUS PRÉCIS:   simple execute, handler=org.postgresql.core.SetupQueryRunner$SimpleResultHandler@2344fc66, maxRows=0, fetchSize=0, flags=1 047
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl sendParse
+LE PLUS PRÉCIS:  FE=> Parse(stmt=null,query="SET application_name = 'PostgreSQL JDBC Driver'",oids={})
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl sendBind
+LE PLUS PRÉCIS:  FE=> Bind(stmt=null,portal=null)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl sendExecute
+LE PLUS PRÉCIS:  FE=> Execute(portal=null,limit=1)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl sendSync
+LE PLUS PRÉCIS:  FE=> Sync
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl processResults
+LE PLUS PRÉCIS:  <=BE ParseComplete [null]
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl processResults
+LE PLUS PRÉCIS:  <=BE BindComplete [unnamed]
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveCommandStatus
+LE PLUS PRÉCIS:  <=BE CommandStatus(SET)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus
+LE PLUS PRÉCIS:  <=BE ParameterStatus(application_name = PostgreSQL JDBC Driver)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveRFQ
+LE PLUS PRÉCIS:  <=BE ReadyForQuery(I)
+oct. 05, 2025 5:13:58 PM org.postgresql.jdbc.PgConnection <init>
+LE PLUS PRÉCIS:     types using binary send = OID_ARRAY,UUID,BYTEA,INT8,INT2,INT4,POINT,TIMESTAMP,BOX,TIMESTAMPTZ,NUMERIC,BYTEA_ARRAY,INT2_ARRAY,INT4_ARRAY,TEXT_ARRAY,TIMETZ,VARCHAR_ARRAY,INT8_ARRAY,TIME,FLOAT4,FLOAT8,FLOAT4_ARRAY,FLOAT8_ARRAY
+oct. 05, 2025 5:13:58 PM org.postgresql.jdbc.PgConnection <init>
+LE PLUS PRÉCIS:     types using binary receive = OID_ARRAY,UUID,BYTEA,INT8,INT2,INT4,POINT,TIMESTAMP,BOX,TIMESTAMPTZ,NUMERIC,BYTEA_ARRAY,INT2_ARRAY,INT4_ARRAY,TEXT_ARRAY,TIMETZ,VARCHAR_ARRAY,INT8_ARRAY,DATE,TIME,FLOAT4,FLOAT8,FLOAT4_ARRAY,FLOAT8_ARRAY
+oct. 05, 2025 5:13:58 PM org.postgresql.jdbc.PgConnection <init>
+LE PLUS PRÉCIS:     integer date/time = true
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl execute
+LE PLUS PRÉCIS:   simple execute, handler=org.postgresql.jdbc.PgStatement$StatementResultHandler@215be6bb, maxRows=0, fetchSize=0, flags=17
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl sendParse
+LE PLUS PRÉCIS:  FE=> Parse(stmt=null,query="SELECT * FROM transactions",oids={})
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl sendBind
+LE PLUS PRÉCIS:  FE=> Bind(stmt=null,portal=null)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl sendDescribePortal
+LE PLUS PRÉCIS:  FE=> Describe(portal=null)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl sendExecute
+LE PLUS PRÉCIS:  FE=> Execute(portal=null,limit=0)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl sendSync
+LE PLUS PRÉCIS:  FE=> Sync
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl processResults
+LE PLUS PRÉCIS:  <=BE ParseComplete [null]
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl processResults
+LE PLUS PRÉCIS:  <=BE BindComplete [unnamed]
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveFields
+LE PLUS PRÉCIS:  <=BE RowDescription(10)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveFields
+LE PLUS PRÉCIS:         Field(id,VARCHAR,65535,T)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveFields
+LE PLUS PRÉCIS:         Field(wallet_id,VARCHAR,65535,T)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveFields
+LE PLUS PRÉCIS:         Field(montant,FLOAT8,8,T)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveFields
+LE PLUS PRÉCIS:         Field(source,VARCHAR,65535,T)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveFields
+LE PLUS PRÉCIS:         Field(destination,VARCHAR,65535,T)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveFields
+LE PLUS PRÉCIS:         Field(datee,TIMESTAMP,8,T)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveFields
+LE PLUS PRÉCIS:         Field(frais,FLOAT8,8,T)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveFields
+LE PLUS PRÉCIS:         Field(taille_bytes,INT4,4,T)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveFields
+LE PLUS PRÉCIS:         Field(priority,<unknown:92748>,4,T)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveFields
+LE PLUS PRÉCIS:         Field(status,<unknown:92756>,4,T)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl processResults
+LE PLUS PRÉCIS:  <=BE DataRow(len=219)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveCommandStatus
+LE PLUS PRÉCIS:  <=BE CommandStatus(SELECT 1)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveRFQ
+LE PLUS PRÉCIS:  <=BE ReadyForQuery(I)
+oct. 05, 2025 5:13:58 PM org.postgresql.jdbc.PgResultSet getString
+LE PLUS PRÉCIS:   getString columnIndex: 1
+oct. 05, 2025 5:13:58 PM org.postgresql.jdbc.PgResultSet getDouble
+LE PLUS PRÉCIS:   getDouble columnIndex: 3
+oct. 05, 2025 5:13:58 PM org.postgresql.jdbc.PgResultSet getString
+LE PLUS PRÉCIS:   getString columnIndex: 3
+oct. 05, 2025 5:13:58 PM org.postgresql.jdbc.PgResultSet getString
+LE PLUS PRÉCIS:   getString columnIndex: 4
+oct. 05, 2025 5:13:58 PM org.postgresql.jdbc.PgResultSet getString
+LE PLUS PRÉCIS:   getString columnIndex: 5
+oct. 05, 2025 5:13:58 PM org.postgresql.jdbc.PgResultSet getString
+LE PLUS PRÉCIS:   getString columnIndex: 6
+oct. 05, 2025 5:13:58 PM org.postgresql.jdbc.PgResultSet getDouble
+LE PLUS PRÉCIS:   getDouble columnIndex: 7
+oct. 05, 2025 5:13:58 PM org.postgresql.jdbc.PgResultSet getString
+LE PLUS PRÉCIS:   getString columnIndex: 7
+oct. 05, 2025 5:13:58 PM org.postgresql.jdbc.PgResultSet getInt
+LE PLUS PRÉCIS:   getInt columnIndex: 8
+oct. 05, 2025 5:13:58 PM org.postgresql.jdbc.PgResultSet getString
+LE PLUS PRÉCIS:   getString columnIndex: 9
+oct. 05, 2025 5:13:58 PM org.postgresql.jdbc.PgResultSet getString
+LE PLUS PRÉCIS:   getString columnIndex: 10
+oct. 05, 2025 5:13:58 PM org.postgresql.core.QueryExecutorCloseAction close
+LE PLUS PRÉCIS:  FE=> Terminate
+oct. 05, 2025 5:13:58 PM org.postgresql.Driver connect
+PRÉCIS: Connecting with URL: jdbc:postgresql://localhost:5432/wallet_java
+oct. 05, 2025 5:13:58 PM org.postgresql.jdbc.PgConnection <init>
+PRÉCIS: PostgreSQL JDBC Driver 42.7.3
+oct. 05, 2025 5:13:58 PM org.postgresql.jdbc.PgConnection setDefaultFetchSize
+PRÉCIS:   setDefaultFetchSize = 0
+oct. 05, 2025 5:13:58 PM org.postgresql.jdbc.PgConnection setPrepareThreshold
+PRÉCIS:   setPrepareThreshold = 5
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.ConnectionFactoryImpl openConnectionImpl
+PRÉCIS: Trying to establish a protocol version 3 connection to localhost:5432
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.ConnectionFactoryImpl tryConnect
+PRÉCIS: Receive Buffer Size is 65 536
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.ConnectionFactoryImpl tryConnect
+PRÉCIS: Send Buffer Size is 1 313 280
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.ConnectionFactoryImpl enableSSL
+LE PLUS PRÉCIS:  FE=> SSLRequest
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.ConnectionFactoryImpl enableSSL
+LE PLUS PRÉCIS:  <=BE SSLOk
+oct. 05, 2025 5:13:58 PM org.postgresql.ssl.MakeSSL convert
+PRÉCIS: converting regular socket connection to ssl
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.ConnectionFactoryImpl sendStartupPacket
+LE PLUS PRÉCIS:  FE=> StartupPacket(user=postgres, database=wallet_java, client_encoding=UTF8, DateStyle=ISO, TimeZone=Africa/Casablanca, extra_float_digits=2)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.ConnectionFactoryImpl doAuthentication
+LE PLUS PRÉCIS:  <=BE AuthenticationSASL
+oct. 05, 2025 5:13:58 PM org.postgresql.jre7.sasl.ScramAuthenticator processServerMechanismsAndInit
+LE PLUS PRÉCIS:  Using SCRAM mechanism SCRAM-SHA-256
+oct. 05, 2025 5:13:58 PM org.postgresql.jre7.sasl.ScramAuthenticator sendScramClientFirstMessage
+LE PLUS PRÉCIS:  FE=> SASLInitialResponse( n,,n=*,r=Slv[5DSd!C{pq1aw{uU[\A'1 )
+oct. 05, 2025 5:13:58 PM org.postgresql.jre7.sasl.ScramAuthenticator processServerFirstMessage
+LE PLUS PRÉCIS:  <=BE AuthenticationSASLContinue( r=Slv[5DSd!C{pq1aw{uU[\A'1KX/AzDsC7BoRnI9bAz3PU3KO,s=BGqv5dfbZc3bSKC16W8fhQ==,i=4096 )
+oct. 05, 2025 5:13:58 PM org.postgresql.jre7.sasl.ScramAuthenticator processServerFirstMessage
+LE PLUS PRÉCIS:  <=BE AuthenticationSASLContinue(salt=BGqv5dfbZc3bSKC16W8fhQ==, iterations=4 096)
+oct. 05, 2025 5:13:58 PM org.postgresql.jre7.sasl.ScramAuthenticator processServerFirstMessage
+LE PLUS PRÉCIS:  FE=> SASLResponse( c=biws,r=Slv[5DSd!C{pq1aw{uU[\A'1KX/AzDsC7BoRnI9bAz3PU3KO,p=BamlAhRF94kuO35jrStJsVTi1qWnTJTaJQUwuQmMUPU= )
+oct. 05, 2025 5:13:58 PM org.postgresql.jre7.sasl.ScramAuthenticator verifyServerSignature
+LE PLUS PRÉCIS:  <=BE AuthenticationSASLFinal( v=yYf/dL5F1rvDxNMT3h20FEeFUEV6PLwYjN6eq4K9Xl8= )
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.ConnectionFactoryImpl doAuthentication
+LE PLUS PRÉCIS:  <=BE AuthenticationOk
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus
+LE PLUS PRÉCIS:  <=BE ParameterStatus(in_hot_standby = off)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus
+LE PLUS PRÉCIS:  <=BE ParameterStatus(integer_datetimes = on)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus
+LE PLUS PRÉCIS:  <=BE ParameterStatus(TimeZone = Africa/Casablanca)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus
+LE PLUS PRÉCIS:  <=BE ParameterStatus(IntervalStyle = postgres)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus
+LE PLUS PRÉCIS:  <=BE ParameterStatus(is_superuser = on)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus
+LE PLUS PRÉCIS:  <=BE ParameterStatus(application_name = )
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus
+LE PLUS PRÉCIS:  <=BE ParameterStatus(default_transaction_read_only = off)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus
+LE PLUS PRÉCIS:  <=BE ParameterStatus(scram_iterations = 4096)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus
+LE PLUS PRÉCIS:  <=BE ParameterStatus(DateStyle = ISO, DMY)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus
+LE PLUS PRÉCIS:  <=BE ParameterStatus(standard_conforming_strings = on)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus
+LE PLUS PRÉCIS:  <=BE ParameterStatus(session_authorization = postgres)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus
+LE PLUS PRÉCIS:  <=BE ParameterStatus(client_encoding = UTF8)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus
+LE PLUS PRÉCIS:  <=BE ParameterStatus(server_version = 16.10 (Ubuntu 16.10-0ubuntu0.24.04.1))
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus
+LE PLUS PRÉCIS:  <=BE ParameterStatus(server_encoding = UTF8)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl readStartupMessages
+LE PLUS PRÉCIS:  <=BE BackendKeyData(pid=71 230,ckey=-1 630 393 677)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveRFQ
+LE PLUS PRÉCIS:  <=BE ReadyForQuery(I)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl execute
+LE PLUS PRÉCIS:   simple execute, handler=org.postgresql.core.SetupQueryRunner$SimpleResultHandler@c038203, maxRows=0, fetchSize=0, flags=1 047
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl sendParse
+LE PLUS PRÉCIS:  FE=> Parse(stmt=null,query="SET extra_float_digits = 3",oids={})
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl sendBind
+LE PLUS PRÉCIS:  FE=> Bind(stmt=null,portal=null)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl sendExecute
+LE PLUS PRÉCIS:  FE=> Execute(portal=null,limit=1)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl sendSync
+LE PLUS PRÉCIS:  FE=> Sync
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl processResults
+LE PLUS PRÉCIS:  <=BE ParseComplete [null]
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl processResults
+LE PLUS PRÉCIS:  <=BE BindComplete [unnamed]
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveCommandStatus
+LE PLUS PRÉCIS:  <=BE CommandStatus(SET)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveRFQ
+LE PLUS PRÉCIS:  <=BE ReadyForQuery(I)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl execute
+LE PLUS PRÉCIS:   simple execute, handler=org.postgresql.core.SetupQueryRunner$SimpleResultHandler@cc285f4, maxRows=0, fetchSize=0, flags=1 047
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl sendParse
+LE PLUS PRÉCIS:  FE=> Parse(stmt=null,query="SET application_name = 'PostgreSQL JDBC Driver'",oids={})
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl sendBind
+LE PLUS PRÉCIS:  FE=> Bind(stmt=null,portal=null)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl sendExecute
+LE PLUS PRÉCIS:  FE=> Execute(portal=null,limit=1)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl sendSync
+LE PLUS PRÉCIS:  FE=> Sync
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl processResults
+LE PLUS PRÉCIS:  <=BE ParseComplete [null]
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl processResults
+LE PLUS PRÉCIS:  <=BE BindComplete [unnamed]
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveCommandStatus
+LE PLUS PRÉCIS:  <=BE CommandStatus(SET)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus
+LE PLUS PRÉCIS:  <=BE ParameterStatus(application_name = PostgreSQL JDBC Driver)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveRFQ
+LE PLUS PRÉCIS:  <=BE ReadyForQuery(I)
+oct. 05, 2025 5:13:58 PM org.postgresql.jdbc.PgConnection <init>
+LE PLUS PRÉCIS:     types using binary send = OID_ARRAY,UUID,BYTEA,INT8,INT2,INT4,POINT,TIMESTAMP,BOX,TIMESTAMPTZ,NUMERIC,BYTEA_ARRAY,INT2_ARRAY,INT4_ARRAY,TEXT_ARRAY,TIMETZ,VARCHAR_ARRAY,INT8_ARRAY,TIME,FLOAT4,FLOAT8,FLOAT4_ARRAY,FLOAT8_ARRAY
+oct. 05, 2025 5:13:58 PM org.postgresql.jdbc.PgConnection <init>
+LE PLUS PRÉCIS:     types using binary receive = OID_ARRAY,UUID,BYTEA,INT8,INT2,INT4,POINT,TIMESTAMP,BOX,TIMESTAMPTZ,NUMERIC,BYTEA_ARRAY,INT2_ARRAY,INT4_ARRAY,TEXT_ARRAY,TIMETZ,VARCHAR_ARRAY,INT8_ARRAY,DATE,TIME,FLOAT4,FLOAT8,FLOAT4_ARRAY,FLOAT8_ARRAY
+oct. 05, 2025 5:13:58 PM org.postgresql.jdbc.PgConnection <init>
+LE PLUS PRÉCIS:     integer date/time = true
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl execute
+LE PLUS PRÉCIS:   simple execute, handler=org.postgresql.jdbc.PgStatement$StatementResultHandler@55f3ddb1, maxRows=0, fetchSize=0, flags=17
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl sendParse
+LE PLUS PRÉCIS:  FE=> Parse(stmt=null,query="SELECT * FROM transactions",oids={})
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl sendBind
+LE PLUS PRÉCIS:  FE=> Bind(stmt=null,portal=null)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl sendDescribePortal
+LE PLUS PRÉCIS:  FE=> Describe(portal=null)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl sendExecute
+LE PLUS PRÉCIS:  FE=> Execute(portal=null,limit=0)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl sendSync
+LE PLUS PRÉCIS:  FE=> Sync
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl processResults
+LE PLUS PRÉCIS:  <=BE ParseComplete [null]
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl processResults
+LE PLUS PRÉCIS:  <=BE BindComplete [unnamed]
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveFields
+LE PLUS PRÉCIS:  <=BE RowDescription(10)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveFields
+LE PLUS PRÉCIS:         Field(id,VARCHAR,65535,T)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveFields
+LE PLUS PRÉCIS:         Field(wallet_id,VARCHAR,65535,T)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveFields
+LE PLUS PRÉCIS:         Field(montant,FLOAT8,8,T)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveFields
+LE PLUS PRÉCIS:         Field(source,VARCHAR,65535,T)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveFields
+LE PLUS PRÉCIS:         Field(destination,VARCHAR,65535,T)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveFields
+LE PLUS PRÉCIS:         Field(datee,TIMESTAMP,8,T)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveFields
+LE PLUS PRÉCIS:         Field(frais,FLOAT8,8,T)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveFields
+LE PLUS PRÉCIS:         Field(taille_bytes,INT4,4,T)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveFields
+LE PLUS PRÉCIS:         Field(priority,<unknown:92748>,4,T)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveFields
+LE PLUS PRÉCIS:         Field(status,<unknown:92756>,4,T)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl processResults
+LE PLUS PRÉCIS:  <=BE DataRow(len=219)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveCommandStatus
+LE PLUS PRÉCIS:  <=BE CommandStatus(SELECT 1)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveRFQ
+LE PLUS PRÉCIS:  <=BE ReadyForQuery(I)
+oct. 05, 2025 5:13:58 PM org.postgresql.jdbc.PgResultSet getString
+LE PLUS PRÉCIS:   getString columnIndex: 1
+oct. 05, 2025 5:13:58 PM org.postgresql.jdbc.PgResultSet getDouble
+LE PLUS PRÉCIS:   getDouble columnIndex: 3
+oct. 05, 2025 5:13:58 PM org.postgresql.jdbc.PgResultSet getString
+LE PLUS PRÉCIS:   getString columnIndex: 3
+oct. 05, 2025 5:13:58 PM org.postgresql.jdbc.PgResultSet getString
+LE PLUS PRÉCIS:   getString columnIndex: 4
+oct. 05, 2025 5:13:58 PM org.postgresql.jdbc.PgResultSet getString
+LE PLUS PRÉCIS:   getString columnIndex: 5
+oct. 05, 2025 5:13:58 PM org.postgresql.jdbc.PgResultSet getString
+LE PLUS PRÉCIS:   getString columnIndex: 6
+oct. 05, 2025 5:13:58 PM org.postgresql.jdbc.PgResultSet getDouble
+LE PLUS PRÉCIS:   getDouble columnIndex: 7
+oct. 05, 2025 5:13:58 PM org.postgresql.jdbc.PgResultSet getString
+LE PLUS PRÉCIS:   getString columnIndex: 7
+oct. 05, 2025 5:13:58 PM org.postgresql.jdbc.PgResultSet getInt
+LE PLUS PRÉCIS:   getInt columnIndex: 8
+oct. 05, 2025 5:13:58 PM org.postgresql.jdbc.PgResultSet getString
+LE PLUS PRÉCIS:   getString columnIndex: 9
+oct. 05, 2025 5:13:58 PM org.postgresql.jdbc.PgResultSet getString
+LE PLUS PRÉCIS:   getString columnIndex: 10
+oct. 05, 2025 5:13:58 PM org.postgresql.core.QueryExecutorCloseAction close
+LE PLUS PRÉCIS:  FE=> Terminate
+oct. 05, 2025 5:13:58 PM com.wallet.service.MempoolService getTransactionPosition
+INFOS: Transaction found in position 1 out of 1 in getTransactionPosition
+oct. 05, 2025 5:13:58 PM org.postgresql.Driver connect
+PRÉCIS: Connecting with URL: jdbc:postgresql://localhost:5432/wallet_java
+oct. 05, 2025 5:13:58 PM org.postgresql.jdbc.PgConnection <init>
+PRÉCIS: PostgreSQL JDBC Driver 42.7.3
+oct. 05, 2025 5:13:58 PM org.postgresql.jdbc.PgConnection setDefaultFetchSize
+PRÉCIS:   setDefaultFetchSize = 0
+oct. 05, 2025 5:13:58 PM org.postgresql.jdbc.PgConnection setPrepareThreshold
+PRÉCIS:   setPrepareThreshold = 5
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.ConnectionFactoryImpl openConnectionImpl
+PRÉCIS: Trying to establish a protocol version 3 connection to localhost:5432
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.ConnectionFactoryImpl tryConnect
+PRÉCIS: Receive Buffer Size is 65 536
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.ConnectionFactoryImpl tryConnect
+PRÉCIS: Send Buffer Size is 1 313 280
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.ConnectionFactoryImpl enableSSL
+LE PLUS PRÉCIS:  FE=> SSLRequest
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.ConnectionFactoryImpl enableSSL
+LE PLUS PRÉCIS:  <=BE SSLOk
+oct. 05, 2025 5:13:58 PM org.postgresql.ssl.MakeSSL convert
+PRÉCIS: converting regular socket connection to ssl
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.ConnectionFactoryImpl sendStartupPacket
+LE PLUS PRÉCIS:  FE=> StartupPacket(user=postgres, database=wallet_java, client_encoding=UTF8, DateStyle=ISO, TimeZone=Africa/Casablanca, extra_float_digits=2)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.ConnectionFactoryImpl doAuthentication
+LE PLUS PRÉCIS:  <=BE AuthenticationSASL
+oct. 05, 2025 5:13:58 PM org.postgresql.jre7.sasl.ScramAuthenticator processServerMechanismsAndInit
+LE PLUS PRÉCIS:  Using SCRAM mechanism SCRAM-SHA-256
+oct. 05, 2025 5:13:58 PM org.postgresql.jre7.sasl.ScramAuthenticator sendScramClientFirstMessage
+LE PLUS PRÉCIS:  FE=> SASLInitialResponse( n,,n=*,r=bR42P#ZoZOgFk{/lgj[{Y>1n )
+oct. 05, 2025 5:13:58 PM org.postgresql.jre7.sasl.ScramAuthenticator processServerFirstMessage
+LE PLUS PRÉCIS:  <=BE AuthenticationSASLContinue( r=bR42P#ZoZOgFk{/lgj[{Y>1nCFRKMsvGQlCQwqkb3pGXI0/e,s=BGqv5dfbZc3bSKC16W8fhQ==,i=4096 )
+oct. 05, 2025 5:13:58 PM org.postgresql.jre7.sasl.ScramAuthenticator processServerFirstMessage
+LE PLUS PRÉCIS:  <=BE AuthenticationSASLContinue(salt=BGqv5dfbZc3bSKC16W8fhQ==, iterations=4 096)
+oct. 05, 2025 5:13:58 PM org.postgresql.jre7.sasl.ScramAuthenticator processServerFirstMessage
+LE PLUS PRÉCIS:  FE=> SASLResponse( c=biws,r=bR42P#ZoZOgFk{/lgj[{Y>1nCFRKMsvGQlCQwqkb3pGXI0/e,p=XSUb8q1jWeYomci9AmQ7+7caqYa216GvDH64EhGDxOI= )
+oct. 05, 2025 5:13:58 PM org.postgresql.jre7.sasl.ScramAuthenticator verifyServerSignature
+LE PLUS PRÉCIS:  <=BE AuthenticationSASLFinal( v=zfzUvWBH7lllg8NDtNUZSNpKNNXpMQWB10mYFiWLvw4= )
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.ConnectionFactoryImpl doAuthentication
+LE PLUS PRÉCIS:  <=BE AuthenticationOk
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus
+LE PLUS PRÉCIS:  <=BE ParameterStatus(in_hot_standby = off)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus
+LE PLUS PRÉCIS:  <=BE ParameterStatus(integer_datetimes = on)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus
+LE PLUS PRÉCIS:  <=BE ParameterStatus(TimeZone = Africa/Casablanca)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus
+LE PLUS PRÉCIS:  <=BE ParameterStatus(IntervalStyle = postgres)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus
+LE PLUS PRÉCIS:  <=BE ParameterStatus(is_superuser = on)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus
+LE PLUS PRÉCIS:  <=BE ParameterStatus(application_name = )
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus
+LE PLUS PRÉCIS:  <=BE ParameterStatus(default_transaction_read_only = off)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus
+LE PLUS PRÉCIS:  <=BE ParameterStatus(scram_iterations = 4096)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus
+LE PLUS PRÉCIS:  <=BE ParameterStatus(DateStyle = ISO, DMY)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus
+LE PLUS PRÉCIS:  <=BE ParameterStatus(standard_conforming_strings = on)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus
+LE PLUS PRÉCIS:  <=BE ParameterStatus(session_authorization = postgres)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus
+LE PLUS PRÉCIS:  <=BE ParameterStatus(client_encoding = UTF8)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus
+LE PLUS PRÉCIS:  <=BE ParameterStatus(server_version = 16.10 (Ubuntu 16.10-0ubuntu0.24.04.1))
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus
+LE PLUS PRÉCIS:  <=BE ParameterStatus(server_encoding = UTF8)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl readStartupMessages
+LE PLUS PRÉCIS:  <=BE BackendKeyData(pid=71 231,ckey=1 167 229 223)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveRFQ
+LE PLUS PRÉCIS:  <=BE ReadyForQuery(I)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl execute
+LE PLUS PRÉCIS:   simple execute, handler=org.postgresql.core.SetupQueryRunner$SimpleResultHandler@8bd1b6a, maxRows=0, fetchSize=0, flags=1 047
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl sendParse
+LE PLUS PRÉCIS:  FE=> Parse(stmt=null,query="SET extra_float_digits = 3",oids={})
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl sendBind
+LE PLUS PRÉCIS:  FE=> Bind(stmt=null,portal=null)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl sendExecute
+LE PLUS PRÉCIS:  FE=> Execute(portal=null,limit=1)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl sendSync
+LE PLUS PRÉCIS:  FE=> Sync
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl processResults
+LE PLUS PRÉCIS:  <=BE ParseComplete [null]
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl processResults
+LE PLUS PRÉCIS:  <=BE BindComplete [unnamed]
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveCommandStatus
+LE PLUS PRÉCIS:  <=BE CommandStatus(SET)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveRFQ
+LE PLUS PRÉCIS:  <=BE ReadyForQuery(I)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl execute
+LE PLUS PRÉCIS:   simple execute, handler=org.postgresql.core.SetupQueryRunner$SimpleResultHandler@18be83e4, maxRows=0, fetchSize=0, flags=1 047
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl sendParse
+LE PLUS PRÉCIS:  FE=> Parse(stmt=null,query="SET application_name = 'PostgreSQL JDBC Driver'",oids={})
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl sendBind
+LE PLUS PRÉCIS:  FE=> Bind(stmt=null,portal=null)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl sendExecute
+LE PLUS PRÉCIS:  FE=> Execute(portal=null,limit=1)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl sendSync
+LE PLUS PRÉCIS:  FE=> Sync
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl processResults
+LE PLUS PRÉCIS:  <=BE ParseComplete [null]
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl processResults
+LE PLUS PRÉCIS:  <=BE BindComplete [unnamed]
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveCommandStatus
+LE PLUS PRÉCIS:  <=BE CommandStatus(SET)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveParameterStatus
+LE PLUS PRÉCIS:  <=BE ParameterStatus(application_name = PostgreSQL JDBC Driver)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveRFQ
+LE PLUS PRÉCIS:  <=BE ReadyForQuery(I)
+oct. 05, 2025 5:13:58 PM org.postgresql.jdbc.PgConnection <init>
+LE PLUS PRÉCIS:     types using binary send = OID_ARRAY,UUID,BYTEA,INT8,INT2,INT4,POINT,TIMESTAMP,BOX,TIMESTAMPTZ,NUMERIC,BYTEA_ARRAY,INT2_ARRAY,INT4_ARRAY,TEXT_ARRAY,TIMETZ,VARCHAR_ARRAY,INT8_ARRAY,TIME,FLOAT4,FLOAT8,FLOAT4_ARRAY,FLOAT8_ARRAY
+oct. 05, 2025 5:13:58 PM org.postgresql.jdbc.PgConnection <init>
+LE PLUS PRÉCIS:     types using binary receive = OID_ARRAY,UUID,BYTEA,INT8,INT2,INT4,POINT,TIMESTAMP,BOX,TIMESTAMPTZ,NUMERIC,BYTEA_ARRAY,INT2_ARRAY,INT4_ARRAY,TEXT_ARRAY,TIMETZ,VARCHAR_ARRAY,INT8_ARRAY,DATE,TIME,FLOAT4,FLOAT8,FLOAT4_ARRAY,FLOAT8_ARRAY
+oct. 05, 2025 5:13:58 PM org.postgresql.jdbc.PgConnection <init>
+LE PLUS PRÉCIS:     integer date/time = true
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl execute
+LE PLUS PRÉCIS:   simple execute, handler=org.postgresql.jdbc.PgStatement$StatementResultHandler@cb5822, maxRows=0, fetchSize=0, flags=17
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl sendParse
+LE PLUS PRÉCIS:  FE=> Parse(stmt=null,query="SELECT * FROM transactions",oids={})
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl sendBind
+LE PLUS PRÉCIS:  FE=> Bind(stmt=null,portal=null)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl sendDescribePortal
+LE PLUS PRÉCIS:  FE=> Describe(portal=null)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl sendExecute
+LE PLUS PRÉCIS:  FE=> Execute(portal=null,limit=0)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl sendSync
+LE PLUS PRÉCIS:  FE=> Sync
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl processResults
+LE PLUS PRÉCIS:  <=BE ParseComplete [null]
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl processResults
+LE PLUS PRÉCIS:  <=BE BindComplete [unnamed]
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveFields
+LE PLUS PRÉCIS:  <=BE RowDescription(10)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveFields
+LE PLUS PRÉCIS:         Field(id,VARCHAR,65535,T)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveFields
+LE PLUS PRÉCIS:         Field(wallet_id,VARCHAR,65535,T)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveFields
+LE PLUS PRÉCIS:         Field(montant,FLOAT8,8,T)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveFields
+LE PLUS PRÉCIS:         Field(source,VARCHAR,65535,T)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveFields
+LE PLUS PRÉCIS:         Field(destination,VARCHAR,65535,T)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveFields
+LE PLUS PRÉCIS:         Field(datee,TIMESTAMP,8,T)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveFields
+LE PLUS PRÉCIS:         Field(frais,FLOAT8,8,T)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveFields
+LE PLUS PRÉCIS:         Field(taille_bytes,INT4,4,T)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveFields
+LE PLUS PRÉCIS:         Field(priority,<unknown:92748>,4,T)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveFields
+LE PLUS PRÉCIS:         Field(status,<unknown:92756>,4,T)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl processResults
+LE PLUS PRÉCIS:  <=BE DataRow(len=219)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveCommandStatus
+LE PLUS PRÉCIS:  <=BE CommandStatus(SELECT 1)
+oct. 05, 2025 5:13:58 PM org.postgresql.core.v3.QueryExecutorImpl receiveRFQ
+LE PLUS PRÉCIS:  <=BE ReadyForQuery(I)
+oct. 05, 2025 5:13:58 PM org.postgresql.jdbc.PgResultSet getString
+LE PLUS PRÉCIS:   getString columnIndex: 1
+oct. 05, 2025 5:13:58 PM org.postgresql.jdbc.PgResultSet getDouble
+LE PLUS PRÉCIS:   getDouble columnIndex: 3
+oct. 05, 2025 5:13:58 PM org.postgresql.jdbc.PgResultSet getString
+LE PLUS PRÉCIS:   getString columnIndex: 3
+oct. 05, 2025 5:13:58 PM org.postgresql.jdbc.PgResultSet getString
+LE PLUS PRÉCIS:   getString columnIndex: 4
+oct. 05, 2025 5:13:58 PM org.postgresql.jdbc.PgResultSet getString
+LE PLUS PRÉCIS:   getString columnIndex: 5
+oct. 05, 2025 5:13:58 PM org.postgresql.jdbc.PgResultSet getString
+LE PLUS PRÉCIS:   getString columnIndex: 6
+oct. 05, 2025 5:13:58 PM org.postgresql.jdbc.PgResultSet getDouble
+LE PLUS PRÉCIS:   getDouble columnIndex: 7
+oct. 05, 2025 5:13:58 PM org.postgresql.jdbc.PgResultSet getString
+LE PLUS PRÉCIS:   getString columnIndex: 7
+oct. 05, 2025 5:13:58 PM org.postgresql.jdbc.PgResultSet getInt
+LE PLUS PRÉCIS:   getInt columnIndex: 8
+oct. 05, 2025 5:13:58 PM org.postgresql.jdbc.PgResultSet getString
+LE PLUS PRÉCIS:   getString columnIndex: 9
+oct. 05, 2025 5:13:58 PM org.postgresql.jdbc.PgResultSet getString
+LE PLUS PRÉCIS:   getString columnIndex: 10
+oct. 05, 2025 5:13:58 PM org.postgresql.core.QueryExecutorCloseAction close
+LE PLUS PRÉCIS:  FE=> Terminate

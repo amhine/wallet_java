@@ -17,11 +17,17 @@ public class DbConnection {
         try {
             Class.forName("org.postgresql.Driver");
             this.connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
-            System.out.println("✅ Connexion PostgreSQL établie !");
+
+
+            if (this.connection != null && !this.connection.isClosed()) {
+                System.out.println("✅ Connexion PostgreSQL établie !");
+            }
+
         } catch (SQLException | ClassNotFoundException e) {
             throw new RuntimeException("Failed to initialize DB connection", e);
         }
     }
+
 
     public static DbConnection getInstance() {
         if (instance == null) {
