@@ -9,7 +9,6 @@ public class DbConnection {
     private static DbConnection instance;
     private Connection connection;
 
-    // Utiliser exactement les noms des variables exportées
     private static final String DB_URL = System.getenv("Db_Host"); 
     private static final String DB_USER = System.getenv("Db_User");
     private static final String DB_PASSWORD = System.getenv("Db_Password");
@@ -35,7 +34,7 @@ public class DbConnection {
         return instance;
     }
 
-    public Connection getConnection() {
-        return connection;
+    public Connection getConnection() throws SQLException {
+        return DriverManager.getConnection(DB_URL, DB_USER , DB_PASSWORD);
     }
 }
