@@ -119,5 +119,5 @@ Votre choix :
 
 
 ## Captures d'écran
-![Uml](uml/diagramme_class_wallet.png)
+![Uml](Uml/diagramme_class_wallet.png)
 
