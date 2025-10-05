@@ -47,7 +47,7 @@ Le projet suit une architecture en couches pour respecter SOLID .
 2. Configurez la base de données :
    - Créez une DB PostgreSQL nommée `wallet_java`.
    - Exécutez le script SQL :
-     ```CREATE TABLE Wallet (
+   `CREATE TABLE Wallet (
     id CHAR(25) PRIMARY KEY,
     address VARCHAR(255) NOT NULL,
     solde DOUBLE NOT NULL DEFAULT 0
@@ -80,10 +80,10 @@ CREATE TABLE Transaction (
     CONSTRAINT fk_transaction_wallet FOREIGN KEY (wallet_id) REFERENCES Wallet(id) ON DELETE CASCADE
 );
      
-     ```
+     `
   
 
-   ```
+   
 
 ## Guide d'utilisation
 
