@@ -119,5 +119,5 @@ Votre choix :
 
 
 ## Captures d'écran
-![MENU](/home/nihad/Images/Captures d’écran/menu.png)
+![Uml](uml/diagramme_class_wallet.png)
 
